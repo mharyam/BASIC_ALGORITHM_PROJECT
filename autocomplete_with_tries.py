@@ -3,10 +3,14 @@ class TrieNode:
         self.is_word = False
         self.children = {}
 
+    def __str__(self):
+        return f"{self.children} -- {self.is_word}"
+
 
 class Trie:
     def __init__(self):
         self.root = TrieNode()
+        self.word_list = []
 
     def add(self, word):
         """
@@ -34,22 +38,25 @@ class Trie:
         return current_node.is_word
 
     def suffixes(self, prefix):
-        words = []
+        word = ''
         current_node = self.root
 
-        if prefix not in current_node.children.get(prefix):
-            return None
+        if prefix not in current_node.children:
+            return False
 
-        # while current_node.children:
-        #     if current_node.children
-        for char in current_node.children:
-            print(char)
+        current_node = current_node.children[prefix]
+        self.suggest_word(current_node, word)
+        return self.word_list
 
-    # def get_word(self, node):
-    #     pass
+    def suggest_word(self, node, new_word):
+        if node.is_word:
+            self.word_list.append(new_word)
 
+        for key, value in node.children.items():
+            self.suggest_word(value, new_word+key)
 
 MyTrie = Trie()
+
 wordList = [
     "ant", "anthology", "antagonist", "antonym",
     "fun", "function", "factory",
@@ -58,6 +65,5 @@ wordList = [
 for word in wordList:
     MyTrie.add(word)
 
-
-MyTrie.suffixes('f')
+print(MyTrie.suffixes('f'))
 
