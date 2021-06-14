@@ -53,10 +53,10 @@ class Trie:
             self.word_list.append(new_word)
 
         for key, value in node.children.items():
-            self.suggest_word(value, new_word+key)
+            self.suggest_word(value, new_word + key)
+
 
 MyTrie = Trie()
-
 wordList = [
     "ant", "anthology", "antagonist", "antonym",
     "fun", "function", "factory",
@@ -66,4 +66,3 @@ for word in wordList:
     MyTrie.add(word)
 
 print(MyTrie.suffixes('f'))
-
