@@ -33,8 +33,8 @@ def sqrt(number):
     return "ERROR this program is for a number between 0-99"
 
 
-print("Pass" if (3 == sqrt(9)) else "Fail")
-print("Pass" if (0 == sqrt(0)) else "Fail")
-print("Pass" if (4 == sqrt(16)) else "Fail")
-print("Pass" if (1 == sqrt(1)) else "Fail")
-print("Pass" if (5 == sqrt(27)) else "Fail")
+print("Pass" if (3 == sqrt(9)) else "Fail")  # result should be 3
+print("Pass" if (0 == sqrt(0)) else "Fail")  # result should be 0
+print("Pass" if (4 == sqrt(16)) else "Fail")  # result should be 4
+print("Pass" if (1 == sqrt(1)) else "Fail")  # result should be 1
+print("Pass" if (5 == sqrt(27)) else "Fail")  # result should be 5
