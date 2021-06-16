@@ -1,5 +1,4 @@
 def rotated_array_search(input_list, number):
-
     """
     Find the index by searching in a rotated sorted array
 
@@ -8,7 +7,7 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
-    return recursive_binary_search(input_list, number)
+    return recursive_binary_search(number, input_list)
 
 
 def linear_search(input_list, number):
@@ -18,16 +17,29 @@ def linear_search(input_list, number):
     return -1
 
 
-def recursive_binary_search(target, source, left=0):
+def recursive_binary_search(target, source):
     if len(source) == 0:
         return None
-    center = (len(source)-1) // 2
-    if source[center] == target:
-        return center + left
-    elif source[center] < target:
-        return recursive_binary_search(target, source[center+1:], left+center+1)
-    else:
-        return recursive_binary_search(target, source[:center], left)
+    left = 0
+    right = len(source)-1
+
+    while left <= right:
+        middle = (left + right)//2
+
+        if source[middle] == target:
+            return middle
+
+        if source[middle] >= source[left]:
+            if source[middle] >= target >= source[left]:
+                right = middle - 1
+            else:
+                left = middle + 1
+        else:
+            if source[middle] >= target <= source[right]:
+                left = middle + 1
+            else:
+                right = middle - 1
+    return -1
 
 
 def test_function(test_case):

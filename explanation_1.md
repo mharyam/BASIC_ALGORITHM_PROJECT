@@ -6,9 +6,11 @@
     The space complexity is 0(1) 
    
 
-2) Problem 2: FILE RECURSION:
-    I am using recursion in here, so the Time complexity is 0(n) 
-   The space complexity is 0(1)
+2) Problem 2: Search in a Rotated Sorted Array:
+   I am searching base on half of the record, after first getting the mid 
+   I check if the mid is the pivot, then I search base on it 
+   Since I am searching half the array Time Complexity is 0(log(n))
+   The space complexity is 0(log(n))
    
 
 3) Huffman Coding: 
