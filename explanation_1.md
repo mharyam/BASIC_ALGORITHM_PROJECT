@@ -13,30 +13,32 @@
    The space complexity is 0(log(n))
    
 
-3) Huffman Coding: 
-    I used a Node class and then stored all the node data in 
-    a list
-   The time complexity is 0(log(n))
-    The space complexity is 0(n)
+3) Problem 3: Rearrange Array Digit:
+   The time complexity is 0(log(n)) because I didn't traverse through all the list 
+   The space complexity is 0(log(n))
  
    
 
-4) Active Directory:
-   I am using a list to add all the group and users 
+4) Problem 4: Dutch National Flag:
+    I made a single traversal 
     The worst case is  O(n) 
     The space complexity is 0(n)
 
    
 
-5)Block Chain:
-    I am using Linked list to append and get
-    The Time complexity is O(1) 
+5)Problem 5: Autocomplete with Tries:
+    The Time complexity is O(log(n)) 
     The space complexity is 0(n)
 
 
-6) Union and Intersection:
-    I am using Linked list to add and get intersection 
-    The worst case is 0(n), because it loops through both linked list to get result 
+6) Problem 6 Max and Min in a Unsorted Array:
+    The worst case is 0(n), because I am traversing through the integer range 
     The space complexity is 0(n)
+   
+
+7) Problem 7: HTTPRouter using a Trie:
+    The Time complexity is O(log(n)) 
+    The space complexity is 0(n)
+
     
 
