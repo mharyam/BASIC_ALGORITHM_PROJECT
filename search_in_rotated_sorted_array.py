@@ -51,8 +51,8 @@ def test_function(test_case):
         print("Fail")
 
 
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 8])
-test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])  # should print 0
+test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])  # should print 5
+test_function([[6, 7, 8, 1, 2, 3, 4], 8])  # should print 2
+test_function([[6, 7, 8, 1, 2, 3, 4], 1])  # should print 3
+test_function([[6, 7, 8, 1, 2, 3, 4], 10])  # should print -1

@@ -38,6 +38,7 @@ class Trie:
         return current_node.is_word
 
     def suffixes(self, prefix):
+        self.word_list = []
         word = ''
         current_node = self.root
 
@@ -65,4 +66,23 @@ wordList = [
 for word in wordList:
     MyTrie.add(word)
 
-print(MyTrie.suffixes('f'))
+
+def test_function(suffix, result):
+    test_case_0 = MyTrie.suffixes(suffix)
+    if test_case_0 == result:
+        print("PASS")
+    else:
+        print("FAIL")
+
+# test 1 should print ['un', 'unction', 'actory']
+test_function('f', ['un', 'unction', 'actory'])
+
+
+# test 1 should print ['nt', 'nthology', 'ntagonist', 'ntonym']
+test_function('a', ['nt', 'nthology', 'ntagonist', 'ntonym'])
+
+# test 1 should print ["rie", "rigger", "rigonometry", "ripod"]
+test_function('t', ["rie", "rigger", "rigonometry", "ripod"])
+
+
+

@@ -18,10 +18,17 @@ def get_min_max(ints):
 ## Example Test Case of Ten Integers
 
 
-import random
+# import random
+#
+# l = [i for i in range(0, 10)]  # a list containing 0 - 9
+# random.shuffle(l)
 
-l = [i for i in range(0, 10)]  # a list containing 0 - 9
-random.shuffle(l)
 
-print(get_min_max(l))
-print("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
+def test_function(*args):
+    min_max_range = [i for i in range(0, args[2])]
+    print("Pass" if ((args[0], args[1]) == get_min_max(min_max_range)) else "Fail")
+
+
+test_function(0, 9, 10)  # should print (0,9)
+test_function(0, 19, 20)  # should print (0,19)
+test_function(0, 4, 5)  # should print (0,4)
