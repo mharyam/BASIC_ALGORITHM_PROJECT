@@ -14,25 +14,44 @@
    
 
 3) Problem 3: Rearrange Array Digit:
+   I first sort the array with sort function which time complexity is O(log(n))
+   Then I loop by odd and even looping by both half 
+   Then I keep adding the number to the sum of even and sum of odd 
    The time complexity is 0(log(n)) because I didn't traverse through all the list 
    The space complexity is 0(log(n))
  
    
 
 4) Problem 4: Dutch National Flag:
-    I made a single traversal 
-    The worst case is  O(n) 
-    The space complexity is 0(n)
-
+    I used the Dutch National Flag algorithm 
+    I have a low, high and middle variable where low is 0 and mid is 0 and high is length of array 
+    The algorithm is that low will always be 0 and high should always be 2 in between we will have 1
+    When I have a 0 at mid I swap mid and low element, and increment mid and low with 1
+    When I have a 1 I just increment the mid 
+    When I have a 2 I will reduce high by 1 
+    Overall I am checking that mid is always less than high
+    Since this is a single traversal 
+    The time complexity  is  0(log(n)) 
+    The space complexity is 0(1)
    
 
 5)Problem 5: Autocomplete with Tries:
-    The Time complexity is O(log(n)) 
-    The space complexity is 0(n)
+    I am using a dictionary to keep each word and giving its child a class of TrieNode(which also have a dictionary for the next word)
+    The loops continue till the word is completed and is_word will be true for the word
+    1) find method 
+        To find a word, I loop through the word given and traverse through the dictionary of each node child
+        Since I am traversing through the list 
+        the time complexity is 0(n)
+        the space complexity is 0(1)
+    2) suffixes method 
+        To get all the suffix of a word, I get the prefix and use it to traverse the children of the word till is_word variable is true
+        Since I am traversing through the list 
+        the time complexity is 0(n)
+        the space complexity is 0(n) because I  am saving all the words I get in a word_list variable 
 
-
-6) Problem 6 Max and Min in a Unsorted Array:
-    The worst case is 0(n), because I am traversing through the integer range 
+6) Problem 6 Max and Min in an Unsorted Array:
+    I traverse through the list, and keep two variables max_num and min_num to keep the current max and min number
+    The time complexity is 0(n)
     The space complexity is 0(n)
    
 

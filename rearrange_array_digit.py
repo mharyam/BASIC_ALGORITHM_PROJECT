@@ -11,11 +11,11 @@ def rearrange_digits(input_list):
     even_number = 0
     input_list.sort(reverse=True)
 
-    # sort by odd
+    # loop by odd
     for i in range(1, len(input_list), 2):
         odd_number = odd_number * 10 + input_list[i]
 
-    #  sort by even
+    #  loop by even
     for i in range(0, len(input_list), 2):
         even_number = even_number * 10 + input_list[i]
 
