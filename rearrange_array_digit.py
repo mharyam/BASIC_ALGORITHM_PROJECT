@@ -35,3 +35,9 @@ test_function([[1, 2, 3, 4, 5], [542, 31]])  # should print 573
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])  # should print 1816
 test_function([[4, 6, 2, 7, 9, 8], [974, 862]])  # should print 1836
 
+#test with same number
+test_function([[1, 1, 1, 1, 1], [111, 11]])
+
+#test with empty array
+test_function([[], []])
+
