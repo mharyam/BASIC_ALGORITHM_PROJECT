@@ -5,18 +5,23 @@ def sort_012(input_list):
     Args:
        input_list(list): List to be sorted
     """
-    zero_list = []
-    one_list = []
-    two_list = []
-    for value in input_list:
-        if value == 0:
-            zero_list.append(value)
-        elif value == 1:
-            one_list.append(value)
-        elif value == 2:
-            two_list.append(value)
-    sorted_list = zero_list + one_list + two_list
-    return sorted_list
+    mid = 0
+    high = len(input_list) -1
+    low = 0
+
+    while mid <= high:
+        if input_list[mid] == 0:
+            input_list[mid] = input_list[low]
+            input_list[low] = 0
+            low += 1
+            mid += 1
+        elif input_list[mid] == 1:
+            mid += 1
+        else:
+            input_list[mid] = input_list[high]
+            input_list[high] = 2
+            high -= 1
+    return input_list
 
 
 def test_function(test_case):
