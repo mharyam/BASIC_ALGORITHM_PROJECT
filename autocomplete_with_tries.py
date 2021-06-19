@@ -85,4 +85,15 @@ test_function('a', ['nt', 'nthology', 'ntagonist', 'ntonym'])
 test_function('t', ["rie", "rigger", "rigonometry", "ripod"])
 
 
+# test with more than a word, this would fail
+test_function('tr', ["ie", "igger", "igonometry", "ipod"])
+
+
+# test with empty, this should print FALSE
+test_function('', False)
+
+
+# test with word not in tries, this should print FALSE
+test_function('m', False)
+
 
