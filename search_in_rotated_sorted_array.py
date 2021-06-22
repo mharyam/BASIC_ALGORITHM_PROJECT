@@ -57,10 +57,11 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 8])  # should print 2
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])  # should print 3
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])  # should print -1
 
-
+""" corner test cases  """
 #test with an normal sorted  array
 test_function([[1, 2, 3, 4, 5, 6, 7], 10])  # should print -1
-
 #test with an unsorted arry
-test_function([[1, 5, 2, 3, 10, 4, 12], 5])  # should FAIL beacuse it is unsorted
+test_function([[1, 5, 2, 3, 10, 4, 12], 5])  # should FAIL because it is unsorted
+
+
 

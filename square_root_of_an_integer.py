@@ -7,7 +7,9 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
-
+    # check for negative value and return ERROR
+    if number < 0:
+        return None
     #check for base case
     if (number == 0 or number == 1):
         return number
@@ -34,4 +36,5 @@ print("Pass" if (0 == sqrt(0)) else "Fail")  # result should be 0
 print("Pass" if (4 == sqrt(16)) else "Fail")  # result should be 4
 print("Pass" if (1 == sqrt(1)) else "Fail")  # result should be 1
 print("Pass" if (5 == sqrt(27)) else "Fail")  # result should be 5
-
+print("Pass" if (None == sqrt(-1)) else "Fail")  # result should be None
+print("Pass" if (2236 == sqrt(5000000)) else "Fail")  # check for large value
